@@ -22,8 +22,18 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  .navbar-fixed {
+    top: 0;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    transition:1s;
 
-  
+  }
+  .navbar {
+    transition:1s;
+
+  }
 
 
 

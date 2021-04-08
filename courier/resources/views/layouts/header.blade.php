@@ -1,5 +1,21 @@
 <header class="header bg-white shadow-sm">
-    <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+    <div class="top-header">
+        <div class="container">
+            <ul class="list-unstyled text-md-right text-center">
+                <li class="list-inline-item">
+                    <div class="icon">PPP</div>
+                    <a href="#"> 01763228277</a>
+                </li>
+                <li class="list-inline-item">
+                    <button>Merchant login</button>
+                </li>
+                <li class="list-inline-item">
+                    <button>En</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('img/admin/logo.png') }}" alt="logo" class="img-fluid w-50">
@@ -16,11 +32,13 @@
                         <a href="#" class="nav-link ">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Take A Test</a>
+                        <a href="#" class="nav-link ">Services</a>
                     </li>
-                    
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Question Bank</a>
+                        <a href="#" class="nav-link ">Locations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link ">Support</a>
                     </li>
                 
                 </ul>
