@@ -89,7 +89,7 @@ class RegisterController extends Controller
         $admin = Admin::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'phone' => '01763228277',
+            'phone' => '01763228277222',
             'address' => 'abc address',
             'password' => Hash::make($request['password']),
         ]);

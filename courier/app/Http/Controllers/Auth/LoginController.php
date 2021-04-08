@@ -5,6 +5,14 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
+
+
+use App\Models\Admin;
+use App\Models\Merchant;
+use App\Models\Rider;
 
 class LoginController extends Controller
 {
@@ -59,6 +67,19 @@ class LoginController extends Controller
         }
         return back()->withInput($request->only('email', 'remember'));
     }
+    // public function adminLogout( Request $request )
+    // {
+    //     if(Auth::guard('admin')->check()) // this means that the admin was logged in.
+    //     {
+    //         Auth::guard('admin')->logout();
+    //         return redirect()->route('admin.login');
+    //     }
+    
+    //     $this->guard()->logout();
+    //     $request->session()->invalidate();
+    
+    //     return $this->loggedOut($request) ?: redirect('/');
+    // }
    //rider
     public function showRiderLoginForm()
     {

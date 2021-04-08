@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/login/admin', 'App\Http\Controllers\Auth\LoginController@showAdminLoginForm');
+Route::get('/login/admin', 'App\Http\Controllers\Auth\LoginController@showAdminLoginForm')->name('admin.login');
 Route::post('/login/admin', 'App\Http\Controllers\Auth\LoginController@adminLogin');
 Route::get('/register/admin', 'App\Http\Controllers\Auth\RegisterController@showAdminRegisterForm');
 Route::post('/register/admin', 'App\Http\Controllers\Auth\RegisterController@createAdmin');
@@ -35,4 +37,7 @@ Route::get('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@s
 Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@createMerchant');
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
+    Route::view('/', 'admin.pages.dashboard');
+
+});
