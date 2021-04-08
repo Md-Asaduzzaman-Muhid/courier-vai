@@ -15,9 +15,7 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'home')->name('home');
 
 Auth::routes();
 
@@ -38,6 +36,12 @@ Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@
 
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
-    Route::view('/', 'admin.pages.dashboard');
+    Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
 
+});
+Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
+    Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
+});
+Route::group(['prefix'=>'rider','as'=>'rider.','middleware'=>'auth:web,rider'], function(){
+    Route::view('/', 'rider.pages.dashboard')->name('rider.dashboard');
 });

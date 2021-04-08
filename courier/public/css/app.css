@@ -1,5 +1,67 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @charset "UTF-8";
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*=col-] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.hyperlink {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-section {
+  height: 550px;
+  position: relative;
+}
+
+.quick-link-home {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.tracking-form-wrapper {
+  padding-top: 150px;
+}
+
+.tracking-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.quick-link-single {
+  box-shadow: 1px 0.1rem 0.4rem 0 rgba(50, 50, 50, 0.5);
+  background-color: wheat;
+}
+.quick-link-single:hover {
+  color: red;
+  background-color: blanchedalmond;
+  box-shadow: 0 0.2rem 3rem 0.1rem rgba(94, 94, 94, 0.4);
+}
+
+@media (max-width: 767.98px) {
+  .tracking-form-wrapper {
+    padding-top: 30px;
+  }
+}
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors

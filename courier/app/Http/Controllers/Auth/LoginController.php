@@ -102,7 +102,7 @@ class LoginController extends Controller
     //merchant
     public function showMerchantLoginForm()
     {
-        return view('auth.login', ['url' => 'rider']);
+        return view('auth.login', ['url' => 'merchant']);
     }
 
     public function merchantLogin(Request $request)
