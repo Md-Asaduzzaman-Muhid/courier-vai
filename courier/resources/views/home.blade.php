@@ -6,11 +6,11 @@ background-size: cover;">
     <div class="container">
             <div class="tracking-form-wrapper">
                 <form class="tracking-form">
-                    <h3 >Track Your Shipment</h3>
+                    <h2 class="text-white">Track Your Shipment</h2>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <input type="text" class="form-control" placeholder="Enter Your Tracking No ..." aria-label="tracking-no" aria-describedby="tracking-no">
                         <div class="input-group-append">
-                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-solid text-uppercase" type="submit">Track</button>
                         </div>
                     </div>
                 </form>
@@ -18,26 +18,26 @@ background-size: cover;">
             <div class="quick-link-home">
                     <div class="row no-gutters">
                         <div class="col-md-4 mb-2 mb-md-0">
-                            <div class="quick-link-single text-center p-3">
-                                icon
-                                <h3>Name</h3>
-                                <p>login and get</p>
+                            <div class="quick-link-single text-center p-md-3 p-1">
+                                <i class="fas fa-sign-in-alt"></i>
+                                <h3>Join Marchent</h3>
+                                <p>Join and get superfast service</p>
                                 <a href="#" class="hyperlink"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-2 mb-md-0">
-                            <div class="quick-link-single text-center p-3">
-                                icon
-                                <h3>Name</h3>
-                                <p>login and get</p>
+                            <div class="quick-link-single text-center p-md-3 p-1">
+                                <i class="fas fa-calculator"></i>
+                                <h3>Get A Quote</h3>
+                                <p>Estimate Cost to deliver</p>
                                 <a href="#" class="hyperlink"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-2 mb-md-0">
-                            <div class="quick-link-single text-center p-3">
-                                icon
-                                <h3>Name</h3>
-                                <p>login and get</p>
+                            <div class="quick-link-single text-center p-md-3 p-1">
+                                <i class="fas fa-business-time"></i>
+                                <h3>For Your Business </h3>
+                                <p>One stop solution for frequent marchent</p>
                                 <a href="#" class="hyperlink"></a>
                             </div>
                         </div>

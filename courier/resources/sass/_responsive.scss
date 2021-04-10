@@ -1,12 +1,18 @@
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
-    
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+    }
  }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
     .tracking-form-wrapper{
         padding-top: 30px;
+    }
+    .quick-link-single i {
+        font-size: 25px;
+        padding: 5px;
     }
     
 }

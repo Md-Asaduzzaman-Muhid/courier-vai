@@ -10012,6 +10012,10 @@ h3 {
   padding-left: 0;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .hyperlink {
   position: absolute;
   left: 0;
@@ -10028,6 +10032,31 @@ h3 {
   transform: translate(-50%, -50%);
 }
 
+.btn-common {
+  background-color: #2d9688;
+  border: 2px solid #2d9688;
+  color: #fff;
+}
+.btn-common:hover {
+  background-color: transparent;
+  color: #2d9688;
+}
+
+.btn-solid {
+  border-radius: 0;
+  padding-left: 27px;
+  padding-right: 27px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid #2d9688;
+  background-color: #2d9688;
+}
+.btn-solid:hover {
+  background-color: #ef4f4f;
+  color: #fff;
+  border-color: #ef4f4f;
+}
+
 .navbar-fixed {
   top: 0;
   z-index: 100;
@@ -10038,6 +10067,33 @@ h3 {
 
 .navbar {
   transition: 1s;
+}
+
+.social-btn {
+  height: 40px;
+  width: 40px;
+  border: 2px solid #2d9688;
+  border-radius: 50%;
+  padding: 7px;
+  color: #2d9688;
+}
+.social-btn:hover {
+  background-color: #2d9688;
+  color: #fff;
+}
+
+.top-header {
+  padding: 5px 0;
+  background-color: #d9dcde;
+}
+
+.navbar {
+  background: #fff;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  font-weight: 700;
+  color: #2d9688;
 }
 
 .banner-section {
@@ -10063,16 +10119,39 @@ h3 {
 
 .quick-link-single {
   box-shadow: 1px 0.1rem 0.4rem 0 rgba(50, 50, 50, 0.5);
-  background-color: wheat;
+  background-color: #2d9688;
+  color: #fff;
 }
 .quick-link-single:hover {
-  color: red;
-  background-color: blanchedalmond;
+  background-color: #ef4f4f;
   box-shadow: 0 0.2rem 3rem 0.1rem rgba(94, 94, 94, 0.4);
 }
+.quick-link-single:hover i {
+  transform: scale(1.4);
+}
+.quick-link-single i {
+  transition: all 0.5s;
+  font-size: 40px;
+  padding: 10px;
+}
 
+.tracking-form input {
+  padding: 27px 10px;
+  border-radius: 0px;
+}
+
+@media (max-width: 575.98px) {
+  .list-inline-item:not(:last-child) {
+    margin-right: 0;
+  }
+}
 @media (max-width: 767.98px) {
   .tracking-form-wrapper {
     padding-top: 30px;
+  }
+
+  .quick-link-single i {
+    font-size: 25px;
+    padding: 5px;
   }
 }
