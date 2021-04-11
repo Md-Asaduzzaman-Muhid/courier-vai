@@ -19,4 +19,8 @@ class Rider extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    public function parcel()
+    {
+        return $this->hasMany(Parcel::class);
+    }
 }

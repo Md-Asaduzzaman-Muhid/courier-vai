@@ -15,23 +15,23 @@ use App\Http\Controllers\Auth\LoginController;
 |
 */
 
-Route::view('/', 'home')->name('home');
+Route::view('/', 'anonymous.home')->name('home');
 
 Auth::routes();
 
 Route::get('/login/admin', 'App\Http\Controllers\Auth\LoginController@showAdminLoginForm')->name('admin.login');
 Route::post('/login/admin', 'App\Http\Controllers\Auth\LoginController@adminLogin');
-Route::get('/register/admin', 'App\Http\Controllers\Auth\RegisterController@showAdminRegisterForm');
+Route::get('/register/admin', 'App\Http\Controllers\Auth\RegisterController@showAdminRegisterForm')->name('admin.register');
 Route::post('/register/admin', 'App\Http\Controllers\Auth\RegisterController@createAdmin');
 
-Route::get('/login/rider', 'App\Http\Controllers\Auth\LoginController@showRiderLoginForm');
+Route::get('/login/rider', 'App\Http\Controllers\Auth\LoginController@showRiderLoginForm')->name('rider.login');
 Route::post('/login/rider', 'App\Http\Controllers\Auth\LoginController@riderLogin');
-Route::get('/register/rider', 'App\Http\Controllers\Auth\RegisterController@showRiderRegisterForm');
+Route::get('/register/rider', 'App\Http\Controllers\Auth\RegisterController@showRiderRegisterForm')->name('rider.register');
 Route::post('/register/rider', 'App\Http\Controllers\Auth\RegisterController@createRider');
 
-Route::get('/login/merchant', 'App\Http\Controllers\Auth\LoginController@showMerchantLoginForm');
+Route::get('/login/merchant', 'App\Http\Controllers\Auth\LoginController@showMerchantLoginForm')->name('merchant.login');
 Route::post('/login/merchant', 'App\Http\Controllers\Auth\LoginController@merchantLogin');
-Route::get('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@showMerchantRegisterForm');
+Route::get('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@showMerchantRegisterForm')->name('merchant.register');
 Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@createMerchant');
 
 

@@ -19,7 +19,10 @@ class CreateMerchantsTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->string('password');
-            $table->longText('address')->nullable();
+            $table->string('nid')->nullable();
+            $table->string('area')->nullable();
+            
+            
             $table->rememberToken();
             $table->timestamps();
         });

@@ -22,7 +22,7 @@ background-size: cover;">
                                 <i class="fas fa-sign-in-alt"></i>
                                 <h3>Join Marchent</h3>
                                 <p>Join and get superfast service</p>
-                                <a href="#" class="hyperlink"></a>
+                                <a href="{{ route('merchant.register') }}" class="hyperlink"></a>
                             </div>
                         </div>
                         <div class="col-md-4 mb-2 mb-md-0">

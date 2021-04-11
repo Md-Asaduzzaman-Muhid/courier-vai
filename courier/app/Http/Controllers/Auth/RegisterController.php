@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Admin;
 use App\Models\Merchant;
 use App\Models\Rider;
+use App\Models\Company;
 use Illuminate\Http\Request;
 
 class RegisterController extends Controller
@@ -110,12 +111,25 @@ class RegisterController extends Controller
     protected function createMerchant(Request $request)
     {
         $this->validator($request->all())->validate();
+        // dd($request);
+
         $merchant = Merchant::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'phone' => '01763228277',
-            'address' => 'abc address',
+            'phone' => $request['phone'],
+            
+            'address' => $request['nid'],
+            'address' => $request['area'],
             'password' => Hash::make($request['password']),
+        ]);
+        $merchant->company()->create([
+            'address' => $request['address'],
+            'company_name' =>  $request['cName'],
+            'company_url' =>  $request['cUrl'],
+            'payment_type' =>  $request['payment'],
+            'account_holder' =>  $request['accountHolder'],
+            'bank_name' =>  $request['bankName'],
+            'branch' =>  $request['branch']
         ]);
         return redirect()->intended('login/merchant');
     }

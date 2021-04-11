@@ -15,7 +15,7 @@
                     <a href="mailto:parcelgoal@gmail.com" class="btn social-btn"><i class="far fa-envelope"></i></a>
                 </li>
                 <li class="list-inline-item">
-                    <a href="#" class="btn btn-common"> Marchent Login</a>
+                    <a href="{{ route('merchant.login')}}" class="btn btn-common"> Marchent Login</a>
                 </li>
             </ul>
         </div>
@@ -34,7 +34,7 @@
                 <ul class="navbar-nav ml-auto">
                     <!-- Authentication Links -->
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Home</a>
+                        <a href="{{ route('home') }}" class="nav-link ">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link ">Services</a>
@@ -51,7 +51,6 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link ">Support</a>
                     </li>
-                
                 </ul>
             </div>
         </div>

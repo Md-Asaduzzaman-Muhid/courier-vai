@@ -19,4 +19,14 @@ class Merchant extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function company()
+    {
+        return $this->hasOne(Company::class);
+    }
+    public function parcel()
+    {
+        return $this->hasMany(Parcel::class);
+    }
 }

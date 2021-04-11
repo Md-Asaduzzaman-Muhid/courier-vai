@@ -20,6 +20,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
     @include('layouts.header')
@@ -27,5 +28,8 @@
     @yield('content')
 
     @include('layouts.footer')
+    
+
+    
 </body>
 </html>

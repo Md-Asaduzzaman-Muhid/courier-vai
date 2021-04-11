@@ -133,3 +133,73 @@
     }
   
   }
+
+  //login-register
+
+  .login-container{
+    background: rgb(255 255 255 / 90%);
+}
+.login-section{
+    background: linear-gradient(to left, #fff 50%, $primary-color 50%);
+}
+.login-form,.register-form{
+    input{
+        display: inline !important;
+        max-width: 320px !important;
+    }
+}
+.form-control{
+    border: transparent !important;
+    border-bottom: 2px solid #ced4da !important;
+}
+.register-section{
+    background: linear-gradient(to left, #fff 50%, $primary-color 50%);
+}
+.register-container{
+    background: rgb(255 255 255 / 90%);
+}
+
+
+
+
+
+
+/*form styles*/
+#regForm {
+  padding: 20px;
+}
+
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+.step.finish {
+  background-color: #4CAF50;
+}
