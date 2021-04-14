@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
+        <a href="index3.html" class="nav-link btn btn-common">Create Parcel</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -126,6 +126,31 @@
                 <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="nav-item has-treeview menu-open">
+            <a href="#" class="nav-link active">
+              <i class="fas fa-fast-forward nav-icon"></i>
+              <p>
+                Parcel Area
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('merchant.parcels.index') }}" class="nav-link">
+                  <i class="fas fa-align-justify nav-icon"></i>
+                  <p>View All</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('merchant.parcels.create') }}" class="nav-link">
+                  <i class="fas fa-plus nav-icon"></i>
+                  <p>Create Percel</p>
                 </a>
               </li>
             </ul>
@@ -375,34 +400,26 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-book"></i>
               <p>
-                Computer Science
+                Parcel Add/Delete
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ url('/admin/question/create') }}" class="nav-link">
+                <a href="{{ route('merchant.parcels.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add New</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ url('/admin/question/') }}" class="nav-link">
+                <a href="{{ route('merchant.parcels.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Show All</p>
                 </a>
               </li>  
             </ul>
           </li>
-       
-     
-          <li class="nav-header">CATEGORY</li>
-          <li class="nav-item">
-            <a href="{{ url('/admin/category') }}" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
-              <p>All Categories</p>
-            </a>
-          </li>     
+         
          
         </ul>
       </nav>

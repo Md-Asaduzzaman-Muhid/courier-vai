@@ -15,6 +15,12 @@ class CreateParcelsTable extends Migration
     {
         Schema::create('parcels', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('merchant_id');
+            $table->string('weight')->nullable();
+            $table->string('type');
+            $table->string('price')->nullable();
+            $table->string('amount_to_collect');
+            $table->longText('instruction')->nullable();
             $table->timestamps();
         });
     }

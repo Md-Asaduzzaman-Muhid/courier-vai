@@ -14,7 +14,7 @@ class ParcelController extends Controller
      */
     public function index()
     {
-        //
+        return view('merchant.pages.parcel.show');
     }
 
     /**
@@ -24,7 +24,7 @@ class ParcelController extends Controller
      */
     public function create()
     {
-        //
+        return view('merchant.pages.parcel.create');
     }
 
     /**
@@ -35,7 +35,7 @@ class ParcelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**

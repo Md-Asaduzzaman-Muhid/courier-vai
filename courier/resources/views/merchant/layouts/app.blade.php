@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Admin Board</title>
+        <title>Admin Board</title>
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="{{url('css/fontawesome/all.min.css')}}">
-    <!-- overlayScrollbars -->
-    <link rel="stylesheet" href=" {{url('css/overlayscrol/OverlayScrollbars.min.css')}}">
-    <!-- Theme style -->
-    <link rel="stylesheet" href="{{url('css/adminlte.min.css')}}">
-    <link rel="stylesheet" href="{{url('css/summernote-bs4.min.css')}}">
-    <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <!-- Font Awesome Icons -->
+        <link rel="stylesheet" href="{{url('css/fontawesome/all.min.css')}}">
+        <!-- overlayScrollbars -->
+        <link rel="stylesheet" href=" {{url('css/overlayscrol/OverlayScrollbars.min.css')}}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{{url('css/adminlte.min.css')}}">
+        <link rel="stylesheet" href="{{url('css/summernote-bs4.min.css')}}">
+        <!-- Google Font: Source Sans Pro -->
+        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
 
     <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
         <div class="wrapper">
         
-            @include('admin.layouts.header')
+            @include('merchant.layouts.header')
           
             @yield('content')
             
-            @include('admin.layouts.footer')
+            @include('merchant.layouts.footer')
 
         </div>
     <!-- ./wrapper -->

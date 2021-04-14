@@ -13,9 +13,9 @@ class Parcel extends Model
     {
         return $this->belongsTo(Merchant::class);
     }
-    public function user()
+    public function reciever()
     {
-        return $this->hasOne(User::class);
+        return $this->hasOne(Reciever::class);
     }
     public function rider()
     {

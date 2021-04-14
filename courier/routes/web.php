@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ParcelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,12 +36,14 @@ Route::get('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@s
 Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@createMerchant');
 
 
+
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
 
 });
 Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
+    Route::resource('parcels', ParcelController::class);
 });
 Route::group(['prefix'=>'rider','as'=>'rider.','middleware'=>'auth:web,rider'], function(){
     Route::view('/', 'rider.pages.dashboard')->name('rider.dashboard');
