@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
+use DB;
+use Auth;
 use App\Models\Parcel;
 use Illuminate\Http\Request;
+use Stevebauman\Purify\Facades\Purify;
 
 class ParcelController extends Controller
 {
@@ -35,7 +39,27 @@ class ParcelController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $req = Purify::clean($request->all());
+        // dd($req);
+        $parcel = new Parcel();
+        $parcel->merchant_id = Auth::guard('merchant')->user()->id ?? $req['merchant_id'];
+        $parcel->weight = $req['weight'];
+        $parcel->type = $req['type'];
+        $parcel->price = $req['price'];
+        $parcel->amount_to_collect = $req['amount_to_collect'];
+        $parcel->save();
+        DB::table('recievers')->insert(
+            ['parcel_id' => $parcel->id,
+            'name' => $req['customer_name'],
+            'phone' => $req['customer_phone'],
+            'area' => $req['delivery_area'],
+            'address' => $req['customer_address'],
+            'special_instruction' => $req['special_instruction'],
+            'merchant_invoice_id' => $req['merchant_invoice_id'],
+            "created_at" =>  date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s'),]
+        );
+      
     }
 
     /**

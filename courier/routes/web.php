@@ -39,7 +39,7 @@ Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
-
+    Route::resource('parcels', ParcelController::class);
 });
 Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
@@ -47,4 +47,5 @@ Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,mer
 });
 Route::group(['prefix'=>'rider','as'=>'rider.','middleware'=>'auth:web,rider'], function(){
     Route::view('/', 'rider.pages.dashboard')->name('rider.dashboard');
+    Route::resource('parcels', ParcelController::class);
 });

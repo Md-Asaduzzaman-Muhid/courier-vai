@@ -15,10 +15,13 @@ class CreateRecieversTable extends Migration
     {
         Schema::create('recievers', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('parcel_id');
             $table->string('name');
-            $table->string('phone');
-            $table->longText('address');
-            $table->string('merchant_invoice_id');
+            $table->string('phone')->nullable();
+            $table->string('area')->nullable();
+            $table->longText('address')->nullable();
+            $table->longText('special_instruction')->nullable();
+            $table->string('merchant_invoice_id')->nullable();
             $table->timestamps();
         });
     }

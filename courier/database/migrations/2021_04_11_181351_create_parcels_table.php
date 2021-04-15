@@ -17,10 +17,10 @@ class CreateParcelsTable extends Migration
             $table->id();
             $table->bigInteger('merchant_id');
             $table->string('weight')->nullable();
-            $table->string('type');
+            $table->smallInteger('type')->nullable();
             $table->string('price')->nullable();
-            $table->string('amount_to_collect');
-            $table->longText('instruction')->nullable();
+            $table->string('amount_to_collect')->nullable();
+            $table->smallInteger('status')->nullable();
             $table->timestamps();
         });
     }
