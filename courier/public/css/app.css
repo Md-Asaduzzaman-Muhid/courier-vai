@@ -10166,6 +10166,33 @@ a:hover {
   background: rgba(255, 255, 255, 0.9);
 }
 
+.status-step {
+  position: relative;
+}
+
+.step-icon {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+.step-icon .line {
+  display: list-item;
+  margin: 0 auto;
+  width: 2px;
+  height: 100%;
+  background: #2d9688;
+}
+.step-icon i {
+  padding: 9px;
+  color: #fff;
+  background-color: #2d9688;
+  border: 2px solid #2d9688;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
 /*form styles*/
 #regForm {
   padding: 20px;

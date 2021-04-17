@@ -5,10 +5,11 @@
 background-size: cover;">
     <div class="container">
             <div class="tracking-form-wrapper">
-                <form class="tracking-form">
-                    <h2 class="text-white">Track Your Shipment</h2>
+                <form class="tracking-form" method="GET" action="{{ route('parcel.track') }}"role="search">
+                    <h2 class="text-white">Track Your Parcel</h2>
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Enter Your Tracking No ..." aria-label="tracking-no" aria-describedby="tracking-no">
+                        <input type="text" name="tracking_id" class="form-control" placeholder="Enter Your Tracking No ..." 
+                        aria-label="tracking_id" aria-describedby="tracking_id">
                         <div class="input-group-append">
                             <button class="btn btn-solid text-uppercase" type="submit">Track</button>
                         </div>

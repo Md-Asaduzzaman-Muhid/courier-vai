@@ -6,6 +6,7 @@ use Auth;
 use App\Models\Merchant;
 use App\Models\Reciever;
 use App\Models\Parcel;
+use App\Models\Track;
 use Illuminate\Http\Request;
 use Stevebauman\Purify\Facades\Purify;
 
@@ -44,6 +45,12 @@ class ParcelController extends Controller
             'address' => $req['customer_address'],
             'special_instruction' => $req['special_instruction'],
             'merchant_invoice_id' => $req['merchant_invoice_id'],
+            "created_at" =>  date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s'),]
+        );
+        DB::table('tracks')->insert(
+            ['parcel_id' => $parcel->id,
+            'status' => 0,
             "created_at" =>  date('Y-m-d H:i:s'),
             "updated_at" => date('Y-m-d H:i:s'),]
         );
@@ -86,9 +93,21 @@ class ParcelController extends Controller
 
     public function destroy(Parcel $parcel)
     {
+        $parcel->track()->delete();
         $parcel->reciever()->delete();
         $parcel->delete();
         return back()->with('success', 'Successfully Deleted Parcel');
     }
-
+    public function track(Request $request)
+    {
+        $req = Purify::clean($request->all());
+        $parcel = Parcel::where('tracking_id', '=', $req['tracking_id'])->orderBy('created_at', 'DESC')->first();
+        // dd($parcel);
+        $id = $req['tracking_id'];
+        if (!empty($parcel)) :
+            return view('anonymous.track',compact(['parcel']));
+        else:
+            return view('anonymous.track_again',compact(['id']));
+        endif;
+    }
 }

@@ -17,6 +17,10 @@ class Parcel extends Model
     {
         return $this->hasOne(Reciever::class);
     }
+    public function track()
+    {
+        return $this->hasMany(Track::class);
+    }
     public function rider()
     {
         return $this->belongsTo(Rider::class);

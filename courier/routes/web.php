@@ -37,6 +37,8 @@ Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@
 
 
 
+Route::get('/track', 'App\Http\Controllers\ParcelController@track')->name('parcel.track');
+
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
     Route::resource('parcels', ParcelController::class);
