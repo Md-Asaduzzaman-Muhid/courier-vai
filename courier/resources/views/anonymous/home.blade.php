@@ -46,4 +46,58 @@ background-size: cover;">
             </div>
     </div>
 </section>
+<section class="half-banner-section">
+    <div class="d-flex min-h-300">
+        <div class="w-50 bg-dark d-flex align-items-center justify-content-center">
+            <div class="study-equal-item text-center text-white p-3">
+                <h3>Online Test</h3>
+                <p>Increse your confidence</p>
+                <a class="btn-common btn" href="#">Give a Test</a>
+            </div>
+        </div>
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
+    background-size: cover;"></div>
+    </div>
+    <div class="d-flex min-h-300">
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study2.webp') }});background-position: center center;
+    background-size: cover;"></div>
+        <div class="w-50 bg-dark d-flex align-items-center justify-content-center">
+            <div class="study-equal-item text-center text-white p-3">
+                <h3>Study question</h3>
+                <p>Organized question reduce your learning time </p>
+                <a class="btn btn-common" href="#">Question Bank</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="charges-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3 border">
+                <div class="charge-parcel">
+                    <p>Upto 1 kg</p>
+                    <h4 >৳60</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 border">
+                <div class="charge-parcel">
+                    <p>Upto 1 kg</p>
+                    <h4 >৳60</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 border">
+                <div class="charge-parcel">
+                    <p>Upto 1 kg</p>
+                    <h4 >৳60</h4>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 border">
+                <div class="charge-parcel">
+                    <p>Upto 1 kg</p>
+                    <h4 >৳60</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 @endsection

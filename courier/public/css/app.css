@@ -10057,6 +10057,10 @@ a:hover {
   border-color: #ef4f4f;
 }
 
+.min-h-300 {
+  min-height: 300px;
+}
+
 .navbar-fixed {
   top: 0;
   z-index: 100;
@@ -10191,6 +10195,10 @@ a:hover {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+
+.charge-parcel {
+  text-align: center;
 }
 
 /*form styles*/
