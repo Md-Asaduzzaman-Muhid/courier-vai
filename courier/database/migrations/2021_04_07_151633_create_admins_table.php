@@ -18,7 +18,8 @@ class CreateAdminsTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->longText('address')->nullable();
+            $table->string('nid')->nullable();
+            $table->string('branch_id')->nullable();
             $table->string('password');
             $table->boolean('is_super')->default(false);
             $table->rememberToken();

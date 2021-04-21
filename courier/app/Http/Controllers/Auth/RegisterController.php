@@ -90,8 +90,8 @@ class RegisterController extends Controller
         $admin = Admin::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'phone' => '01763228277222',
-            'address' => 'abc address',
+            'phone' => $request['phone'],
+            'nid' => $request['nid'],
             'password' => Hash::make($request['password']),
         ]);
         return redirect()->intended('login/admin');
@@ -102,8 +102,8 @@ class RegisterController extends Controller
         $rider = Rider::create([
             'name' => $request['name'],
             'email' => $request['email'],
-            'phone' => '01763228277',
-            'address' => 'abc address',
+            'phone' => $request['phone'],
+            'nid' => $request['nid'],
             'password' => Hash::make($request['password']),
         ]);
         return redirect()->intended('login/rider');
@@ -118,7 +118,7 @@ class RegisterController extends Controller
             'email' => $request['email'],
             'phone' => $request['phone'],
             
-            'address' => $request['nid'],
+            'nid' => $request['nid'],
             'address' => $request['area'],
             'password' => Hash::make($request['password']),
         ]);

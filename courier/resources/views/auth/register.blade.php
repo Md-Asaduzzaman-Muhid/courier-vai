@@ -99,15 +99,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-
-                                
-                                
-
-                                
-
-                                
                             </div>
+                            @if($url == 'merchant')
                             <div class="tab">
                                 <h3 class="text-center mb-md-4 mb-2">Company details</h3>
                                 <div class="form-group text-center mb-5">
@@ -207,18 +200,20 @@
                                         @enderror
                                 </div>
                             </div>
-                            
+                            @endif
                             <div style="overflow:auto;">
                                 <div style="float:right;">
                                 <button id="prevBtn" onclick="nextPrev(-1)" class="btn btn-solid">Previous</button>
                                 <button id="nextBtn" type="button" onclick="nextPrev(1)" class="btn btn-solid">Next</button>
                                 </div>
                             </div>
+                            @if($url == 'merchant')
                             <div style="text-align:center;margin-top:40px;">
                                 <span class="step"></span>
                                 <span class="step"></span>
                                 <span class="step"></span> 
                             </div>
+                            @endif
                         </form>
                     </div>
                 </div>
