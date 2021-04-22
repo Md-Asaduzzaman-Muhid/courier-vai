@@ -10240,6 +10240,10 @@ input.invalid {
   background-color: #4CAF50;
 }
 
+.logo {
+  max-width: 150px;
+}
+
 @media (max-width: 575.98px) {
   .list-inline-item:not(:last-child) {
     margin-right: 0;

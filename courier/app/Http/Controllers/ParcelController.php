@@ -15,10 +15,21 @@ class ParcelController extends Controller
 
     public function index()
     {
-        $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
-        $merchant_name = Auth::guard('merchant')->user()->name;
+        
+        if(Auth::guard('merchant')->check()):
+            $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
+            $merchant_name = Auth::guard('merchant')->user()->name;
+            return view('merchant.pages.parcel.show',compact(['parcels','merchant_name']));
+        elseif(Auth::guard('admin')->check()):
+            $parcels = Parcel::orderBy('merchant_id', 'DESC')->get();
+            $admin_name = Auth::guard('admin')->user()->name;
+            return view('admin.pages.parcel.show',compact(['parcels']));
+        else:
+            return $error = "Nor Permited";
+        endif;
+        
         // dd($parcels['0']->reciever);
-        return view('merchant.pages.parcel.show',compact(['parcels','merchant_name']));
+        
     }
 
     public function create()

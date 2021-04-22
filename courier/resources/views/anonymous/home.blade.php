@@ -70,31 +70,32 @@ background-size: cover;">
         </div>
     </div>
 </section>
-<section class="charges-section">
+<section class="charges-section my-3">
     <div class="container">
+        <h3 class="section-title text-center">Our Charges</h3>
         <div class="row">
             <div class="col-6 col-md-3 border">
-                <div class="charge-parcel">
-                    <p>Upto 1 kg</p>
-                    <h4 >৳60</h4>
+                <div class="charge-parcel py-3">
+                    <p class="mb-0">Upto 1 kg</p>
+                    <h4 class="mb-0">৳ 60</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">
-                <div class="charge-parcel">
-                    <p>Upto 1 kg</p>
-                    <h4 >৳60</h4>
+                <div class="charge-parcel py-3">
+                    <p class="mb-0">1 kg - 3 kg</p>
+                    <h4 class="mb-0">৳ 100</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">
-                <div class="charge-parcel">
-                    <p>Upto 1 kg</p>
-                    <h4 >৳60</h4>
+                <div class="charge-parcel py-3">
+                    <p class="mb-0">3 kg -5 kg</p>
+                    <h4 class="mb-0">৳ 130</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">
-                <div class="charge-parcel">
-                    <p>Upto 1 kg</p>
-                    <h4 >৳60</h4>
+                <div class="charge-parcel py-3">
+                    <p class="mb-0"> 5 kg +</p>
+                    <h4 class="mb-0">Lets talk</h4>
                 </div>
             </div>
         </div>

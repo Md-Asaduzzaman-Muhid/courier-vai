@@ -23,7 +23,7 @@
     <nav class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="{{ asset('img/admin/logo.png') }}" alt="logo" class="img-fluid w-50">
+                <img src="{{ asset('img/common/logo.png') }}" alt="logo" class="img-fluid logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navItem" aria-controls="navItem" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>

@@ -1,16 +1,9 @@
-<footer class="footer bg-secondary">
-    <div class="footer-top py-md-5 py-3">
-        <div class="container-fluid">
+<footer class="footer bg-dark text-light">
+    <div class="footer-top py-md-5 py-3 border-bottom">
+        <div class="container">
             <div class="row">
                     <div class="col-lg-3 col-md-6"> 
-                        <div class="footer-box text-left">
-                        <img src="{{ asset('img/admin/logo.png') }}" alt="logo" class="img-fluid">
-                            
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dolores et cumque sequi eligendi asperiores.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6"> 
-                        <div class="footer-box text-lg-right">
+                        <div class="footer-box ">
                             <h4 class="footer-title">Page</h4>
                             <ul class="list-unstyled footer-list">
                                 <li><a href="#">Home</a></li>
@@ -22,7 +15,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6"> 
-                        <div class="footer-box text-lg-right">
+                        <div class="footer-box">
                             <h4 class="footer-title">Page</h4>
                             <ul class="list-unstyled footer-list">
                                 <li><a href="#">Home</a></li>
@@ -34,7 +27,7 @@
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
-                        <div class="footer-box text-lg-right footer-list">
+                        <div class="footer-box">
                             <h4 class="footer-title">Page</h4>
                             <ul class="list-unstyled footer-list">
                                 <li><a href="#">Home</a></li>
@@ -43,6 +36,14 @@
                                 <li><a href="#">Question</a></li>
                                 <li><a href="#">Admin</a></li>
                             </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6"> 
+                        <div class="footer-box text-left">
+                            <a class="navbar-brand" href="{{ route('home') }}">
+                                <img src="{{ asset('img/common/logo.png') }}" alt="logo" class="img-fluid">
+                            </a>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dolores et cumque sequi eligendi asperiores.</p>
                         </div>
                     </div>
             </div>
