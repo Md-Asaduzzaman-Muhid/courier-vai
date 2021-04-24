@@ -54,7 +54,7 @@
     <a href="{{ url('/admin/') }}" class="brand-link">
       <img src=" {{ asset('img/admin/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">MCQ Hub</span>
+      <span class="brand-text font-weight-light">Parcel Goal</span>
     </a>
 
     <!-- Sidebar -->
@@ -75,39 +75,16 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
+            <a href="#" class="nav-link">
+              <i class="fas fa-dollar-sign nav-icon"></i>
+              <p> Payment</p>
             </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
 
 
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
-              <i class="fas fa-fast-forward nav-icon"></i>
+              <i class="fas fa-boxes nav-icon"></i>
               <p>
                 Parcel Area
                 <i class="right fas fa-angle-left"></i>

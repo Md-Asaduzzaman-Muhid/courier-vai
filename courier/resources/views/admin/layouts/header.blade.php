@@ -6,7 +6,7 @@
       <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
     </li>
     <li class="nav-item d-none d-sm-inline-block">
-      <a href="{{ route('merchant.parcels.create') }}" class="nav-link btn btn-common">Create Parcel</a>
+      <a href="{{ route('admin.parcels.create') }}" class="nav-link btn btn-common">Create Parcel</a>
     </li>
   </ul>
 
@@ -54,7 +54,7 @@
   <a href="{{ url('/admin/') }}" class="brand-link">
     <img src=" {{ asset('img/admin/logo.png') }}" alt="Logo" class="brand-image img-circle elevation-3"
          style="opacity: .8">
-    <span class="brand-text font-weight-light">MCQ Hub</span>
+    <span class="brand-text font-weight-light">Parcel Goal</span>
   </a>
 
   <!-- Sidebar -->

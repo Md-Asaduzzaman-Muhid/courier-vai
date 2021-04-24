@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>Admin Board</title>
-
+    <title>Parcel Goal</title>
+    <link rel="icon" href="{{ asset('img/common/favicon.png') }}" sizes="32x32" type="image/png">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="{{url('css/fontawesome/all.min.css')}}">
     <!-- overlayScrollbars -->

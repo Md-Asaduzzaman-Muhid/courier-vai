@@ -29,4 +29,8 @@ class Merchant extends Authenticatable
     {
         return $this->hasMany(Parcel::class);
     }
+    public function payment()
+    {
+        return $this->hasMany(Payment::class);
+    }
 }
