@@ -13,7 +13,7 @@ class Merchant extends Authenticatable
     protected $guard = 'merchant';
 
     protected $fillable = [
-        'name', 'email','phone', 'password',
+        'name', 'email','phone', 'password', 'nid','area',
     ];
 
     protected $hidden = [

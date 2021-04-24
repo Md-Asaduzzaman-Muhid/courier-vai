@@ -21,7 +21,7 @@ class ParcelController extends Controller
             $merchant_name = Auth::guard('merchant')->user()->name;
             return view('merchant.pages.parcel.show',compact(['parcels','merchant_name']));
         elseif(Auth::guard('admin')->check()):
-            $parcels = Parcel::orderBy('merchant_id', 'DESC')->get();
+            $parcels = Parcel::orderBy('created_at', 'DESC')->get();
             $admin_name = Auth::guard('admin')->user()->name;
             return view('admin.pages.parcel.show',compact(['parcels']));
         else:
@@ -34,7 +34,8 @@ class ParcelController extends Controller
 
     public function create()
     {
-        return view('merchant.pages.parcel.create');
+        $merchants = Merchant::orderBy('created_at', 'DESC')->get();
+        return view('merchant.pages.parcel.create',compact(['merchants']));
     }
 
     public function store(Request $request)
@@ -76,7 +77,8 @@ class ParcelController extends Controller
     public function edit(Parcel $parcel)
     {
         // dd($parcel->reciever);
-        return view('merchant.pages.parcel.edit',compact(['parcel']));
+        $merchants = Merchant::orderBy('created_at', 'DESC')->get();
+        return view('merchant.pages.parcel.edit',compact(['parcel','merchants']));
         // dd($parcel);
     }
 
@@ -98,7 +100,7 @@ class ParcelController extends Controller
             'merchant_invoice_id' => $req['merchant_invoice_id'],
             "updated_at" => date('Y-m-d H:i:s')
         ));
-        // dd($parcel);
+        
         return back()->with('success', 'Successfully Created Parcel');
     }
 

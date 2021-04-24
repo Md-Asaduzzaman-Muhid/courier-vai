@@ -111,15 +111,14 @@ class RegisterController extends Controller
     protected function createMerchant(Request $request)
     {
         $this->validator($request->all())->validate();
-        // dd($request);
+        //  dd($request);
 
         $merchant = Merchant::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'phone' => $request['phone'],
-            
             'nid' => $request['nid'],
-            'address' => $request['area'],
+            'area' => $request['area'],
             'password' => Hash::make($request['password']),
         ]);
         $merchant->company()->create([

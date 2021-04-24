@@ -23,8 +23,6 @@ class CreateMerchantsTable extends Migration
             $table->string('password');
             $table->string('nid')->nullable();
             $table->string('area')->nullable();
-            
-            
             $table->rememberToken();
             $table->timestamps();
         });

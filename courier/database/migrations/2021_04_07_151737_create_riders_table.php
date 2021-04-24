@@ -19,6 +19,7 @@ class CreateRidersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->string('password');
+            $table->string('nid')->nullable();
             $table->longText('address')->nullable();
             $table->string('delivered_parcel')->nullable();
             $table->rememberToken();

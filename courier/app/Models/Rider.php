@@ -13,7 +13,7 @@ class Rider extends Authenticatable
     protected $guard = 'rider';
 
     protected $fillable = [
-        'name', 'email','phone', 'password',
+        'name', 'email','phone', 'password','nid','delivered_parcel',
     ];
 
     protected $hidden = [
