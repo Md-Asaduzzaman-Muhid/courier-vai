@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ParcelController;
-
+use App\Http\Controllers\PaymentController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,6 +46,7 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], 
 Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
     Route::resource('parcels', ParcelController::class);
+    Route::resource('payment', PaymentController::class);
 });
 Route::group(['prefix'=>'rider','as'=>'rider.','middleware'=>'auth:web,rider'], function(){
     Route::view('/', 'rider.pages.dashboard')->name('rider.dashboard');

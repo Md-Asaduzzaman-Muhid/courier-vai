@@ -14,7 +14,7 @@
                                 <input name="customer_phone" type="tel" class="form-control" placeholder="Customer Phone Number" required>
                                 <input name ="delivery_area" list="area-delivery" class="form-control" placeholder="Select Delivery Area">
                                     <datalist id="area-delivery">
-                                        <option value="Dhanmondi">
+                                        <option value="Dhaka">
                                         <option value="Gulshan">
                                         <option value="Banani">
                                         <option value="Uttara">
@@ -48,7 +48,7 @@
                                     <label class="form-check-label" for="Type3">Solid</label>
                                 </div>
                                 <div class="form-group">
-                                    <input type="number" min="0" name="weight" class="form-control" placeholder="Weight(g)">
+                                    <input type="number" min="0"step=".1" name="weight" class="form-control" placeholder="Weight(kg)">
                                 </div>
                                 <textarea name="special_instruction" class="form-control" rows="5" placeholder="Special Instruction"></textarea>
                             </div>

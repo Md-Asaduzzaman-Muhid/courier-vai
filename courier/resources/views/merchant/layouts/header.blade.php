@@ -75,7 +75,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link">
+            <a href="{{ route('merchant.payment.index') }}" class="nav-link">
               <i class="fas fa-dollar-sign nav-icon"></i>
               <p> Payment</p>
             </a>
@@ -86,7 +86,7 @@
             <a href="#" class="nav-link active">
               <i class="fas fa-boxes nav-icon"></i>
               <p>
-                Parcel Area
+                Parcels
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>

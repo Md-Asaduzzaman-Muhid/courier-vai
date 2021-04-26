@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Payment;
+use App\Models\Parcel;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
@@ -14,7 +16,9 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        //
+        $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
+    //    dd($parcels['0']->payment->status);
+        return view('merchant.pages.payment.show',compact(['parcels']));
     }
 
     /**

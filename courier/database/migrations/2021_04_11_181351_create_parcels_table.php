@@ -21,6 +21,7 @@ class CreateParcelsTable extends Migration
             $table->smallInteger('type')->nullable();
             $table->string('price')->nullable();
             $table->string('amount_to_collect')->nullable();
+            $table->smallInteger('delivery_charge')->nullable();
             $table->smallInteger('status')->nullable();
             $table->timestamps();
         });

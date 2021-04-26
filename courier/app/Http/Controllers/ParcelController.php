@@ -41,6 +41,11 @@ class ParcelController extends Controller
     public function store(Request $request)
     {
         $req = Purify::clean($request->all());
+        if($req['weight'] <= 1): $charge =50; 
+            elseif($req['weight']>1 && $req['weight']<=3):  $charge =80;  
+            else:  $charge =100; 
+        endif;
+       
         $parcel = new Parcel();
         $parcel->tracking_id = strtoupper(uniqid());
         $parcel->merchant_id = Auth::guard('merchant')->user()->id ?? $req['merchant_id'];
@@ -48,6 +53,7 @@ class ParcelController extends Controller
         $parcel->type = $req['type'];
         $parcel->price = $req['price'];
         $parcel->amount_to_collect = $req['amount_to_collect'];
+        $parcel->delivery_charge = $req['delivery_charge'] ?? $charge ;
         $parcel->save();
         DB::table('recievers')->insert(
             ['parcel_id' => $parcel->id,

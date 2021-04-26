@@ -15,8 +15,9 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('paid')->nullable();
-            $table->bigInteger('due')->nullable();
+            $table->bigInteger('parcel_id');
+            // $table->bigInteger('paid')->nullable();
+            // $table->bigInteger('due')->nullable();
             $table->smallInteger('status')->nullable();
             $table->timestamps();
         });

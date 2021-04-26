@@ -25,4 +25,8 @@ class Parcel extends Model
     {
         return $this->belongsTo(Rider::class);
     }
+    public function payment()
+    {
+        return $this->hasOne(Payment::class);
+    }
 }

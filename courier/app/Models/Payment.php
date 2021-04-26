@@ -8,8 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Payment extends Model
 {
     protected $guarded = ['id'];
-    public function merchant()
+    public function parcel()
     {
-        return $this->belongsTo(Merchant::class);
+        return $this->belongsTo(Parcel::class);
     }
 }

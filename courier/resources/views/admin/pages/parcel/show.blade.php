@@ -29,7 +29,7 @@
                                 <p>{{$parcel->reciever->name}}</p>
                                 <p>{{$parcel->reciever->phone}}</p>
                             </td>
-                            <td>{{$parcel->reciever->id}}</td>
+                            <td>{{$parcel->payment->status}}</td>
                             <td>{{$parcel->price}}</td>
                             <td><a href="{{ route('admin.parcels.edit', $parcel->id) }}">Edit</a> 
     
