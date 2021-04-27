@@ -42,6 +42,8 @@ Route::get('/track', 'App\Http\Controllers\ParcelController@track')->name('parce
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
     Route::resource('parcels', ParcelController::class);
+    Route::resource('payment', PaymentController::class);
+    Route::post('/parcel/status', 'App\Http\Controllers\ParcelController@changeStatus')->name('parcel.status');
 });
 Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');

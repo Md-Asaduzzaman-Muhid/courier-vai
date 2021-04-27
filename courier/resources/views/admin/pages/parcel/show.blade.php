@@ -22,15 +22,29 @@
                     <tbody>
                         @foreach ($parcels as $parcel)
                         <tr>
-                            <td>{{$parcel->created_at->isoFormat('Do MMM, YYYY H:mm') }}</td>
-                            <td>{{$parcel->tracking_id}}</td>
-                            <td>{{$parcel->merchant->name}}</td>
+                            <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY H:mm') }}</td>
+                            <td>{{@$parcel->tracking_id}}</td>
+                            <td>{{@$parcel->merchant->name}}</td>
                             <td>
-                                <p>{{$parcel->reciever->name}}</p>
-                                <p>{{$parcel->reciever->phone}}</p>
+                                <p>{{@$parcel->reciever->name}}</p>
+                                <p>{{@$parcel->reciever->phone}}</p>
                             </td>
-                            <td>{{$parcel->payment->status}}</td>
-                            <td>{{$parcel->price}}</td>
+                            <td>{{@$parcel->status}}
+                                <form action="{{ route('admin.parcel.status', $parcel->id) }}" method="POST">
+                                    @CSRF
+                                    <input type="hidden" name="id" value={{$parcel->id}}>
+                                    <div class="form-group">
+                                      <select class="form-control" name= "status">
+                                        <option value= "1">Pending</option>
+                                        <option value= "2">Paid</option>
+                                        <option value= "3">Not paid</option>
+                                      </select>
+                                    </div>
+
+                                    <button onclick="return confirm('Are you sure?')"class="text-danger">Change Status</button>
+                                </form>
+                            </td>
+                            <td>{{@$parcel->price}}</td>
                             <td><a href="{{ route('admin.parcels.edit', $parcel->id) }}">Edit</a> 
     
                             <form action="{{ route('admin.parcels.destroy', $parcel->id) }}" method="POST">

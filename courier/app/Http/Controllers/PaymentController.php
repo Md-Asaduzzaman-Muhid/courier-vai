@@ -16,9 +16,17 @@ class PaymentController extends Controller
      */
     public function index()
     {
-        $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
-    //    dd($parcels['0']->payment->status);
-        return view('merchant.pages.payment.show',compact(['parcels']));
+        
+
+        if(Auth::guard('merchant')->check()):
+            $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
+            return view('merchant.pages.payment.show',compact(['parcels']));
+        elseif(Auth::guard('admin')->check()):
+            $parcels = Parcel::orderBy('created_at', 'DESC')->get();
+            return view('admin.pages.payment.show',compact(['parcels']));
+        else:
+            return $error = "Nor Permited";
+        endif;
     }
 
     /**
@@ -73,7 +81,10 @@ class PaymentController extends Controller
      */
     public function update(Request $request, Payment $payment)
     {
-        //
+        $payment->status = $request['status'];
+
+        $payment->save();
+        return back()->with('success', 'Successfully Created Parcel');
     }
 
     /**

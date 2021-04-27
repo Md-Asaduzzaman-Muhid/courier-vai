@@ -129,4 +129,16 @@ class ParcelController extends Controller
             return view('anonymous.track_again',compact(['id']));
         endif;
     }
+    public function changeStatus(Request $request){
+        $parcel = Parcel::where('id', '=', $request['id'])->orderBy('created_at', 'DESC')->first();
+        $parcel->status = $request['status'];
+        $parcel->save();
+        DB::table('tracks')->insert(
+            ['parcel_id' => $parcel->id,
+            'status' => $parcel->status,
+            "created_at" =>  date('Y-m-d H:i:s'),
+            "updated_at" => date('Y-m-d H:i:s'),]
+        );
+        return back()->with('success', 'Successfully Created Parcel');
+    }
 }

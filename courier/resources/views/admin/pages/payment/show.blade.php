@@ -13,6 +13,7 @@
                     <th scope="col">COD Charge</th>
                     <th scope="col">Total Adjustment Amount</th>
                     <th scope="col">Status</th>
+                    <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +26,19 @@
                   <td>0</td>
                   <td>{{@$parcel->amount_to_collect - @$parcel->delivery_charge}}</td>
                   <td>{{@$parcel->payment->status}}</td>
+                  <td>
+                    <form action="{{ route('admin.payment.update', $parcel->payment->id) }}" method="POST">
+                      @CSRF
+                      {{ method_field('PUT') }}
+                      <div class="form-group">
+                        <select class="form-control" name= "status">
+                          <option value= "1">Pending</option>
+                          <option value= "2">Paid</option>
+                        </select>
+                      </div>
+                      <button onclick="return confirm('Are you sure?')" class="text-danger">Change Status</button>
+                  </form>
+                  </td>
               </tr>
               @endforeach
             </tbody>
