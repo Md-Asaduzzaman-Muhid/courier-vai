@@ -18,14 +18,26 @@
                                 <span class="line"></span>
                             </div>
                             @if($tc->status == 0)
-                            <h5>Successfully created</h5>
-                            @elseif($tc->status == 0)
-                            <h5>Successfully updated</h5>
+                                <h5>Successfully Created parcel</h5>
+                            @elseif($tc->status == 1)
+                                <h5>Recieved by Parcel Goal</h5>
+                            @elseif($tc->status == 1)
+                                <h5>Send to the nearest delivery point</h5>
+                            @elseif($tc->status == 2)
+                                <h5>On the way to deliver</h5>
+                            @elseif($tc->status == 3)
+                                <h5>Successfully delivered</h5>
+                            @elseif($tc->status == 4)
+                                <h5>Customer couldn't respond</h5>
+                            @elseif($tc->status == 5)
+                                <h5>On the way to return to mercahnt</h5>
+                            @elseif($tc->status == 6)
+                                <h5>Successfully Returned to merchant</h5>
                             @else
-                            <h5>wao</h5>
+                                <h5>Untracked</h5>
                             @endif
                             
-                            <p>{{$tc->created_at}}</p>
+                            <p>{{@$tc->created_at->isoFormat('Do MMM, YYYY h:m A')}}</p>
                         </div>
                     </li>
                     @endforeach

@@ -22,7 +22,7 @@
                     <tbody>
                         @foreach ($parcels as $parcel)
                         <tr>
-                            <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY H:mm') }}</td>
+                            <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY h:m A')}}</td>
                             <td>{{@$parcel->tracking_id}}</td>
                             <td>{{@$parcel->merchant->name}}</td>
                             <td>

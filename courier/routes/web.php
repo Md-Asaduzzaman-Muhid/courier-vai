@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\ParcelController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PickupController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,6 +50,7 @@ Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,mer
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
     Route::resource('parcels', ParcelController::class);
     Route::resource('payment', PaymentController::class);
+    Route::resource('pickup', PickupController::class);
 });
 Route::group(['prefix'=>'rider','as'=>'rider.','middleware'=>'auth:web,rider'], function(){
     Route::view('/', 'rider.pages.dashboard')->name('rider.dashboard');

@@ -77,19 +77,19 @@ background-size: cover;">
             <div class="col-6 col-md-3 border">
                 <div class="charge-parcel py-3">
                     <p class="mb-0">Upto 1 kg</p>
-                    <h4 class="mb-0">৳ 60</h4>
+                    <h4 class="mb-0">৳ 50</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">
                 <div class="charge-parcel py-3">
                     <p class="mb-0">1 kg - 3 kg</p>
-                    <h4 class="mb-0">৳ 100</h4>
+                    <h4 class="mb-0">৳ 80</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">
                 <div class="charge-parcel py-3">
                     <p class="mb-0">3 kg -5 kg</p>
-                    <h4 class="mb-0">৳ 130</h4>
+                    <h4 class="mb-0">৳ 100</h4>
                 </div>
             </div>
             <div class="col-6 col-md-3 border">

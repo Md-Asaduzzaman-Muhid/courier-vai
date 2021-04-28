@@ -81,6 +81,12 @@
             </a>
           </li>
 
+          <li class="nav-item has-treeview menu-open">
+            <a href="{{ route('merchant.pickup.index') }}" class="nav-link">
+              <i class="fas fa-truck-pickup nav-icon"></i>
+              <p> Pickup Request</p>
+            </a>
+          </li>
 
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">

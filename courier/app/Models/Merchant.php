@@ -29,5 +29,9 @@ class Merchant extends Authenticatable
     {
         return $this->hasMany(Parcel::class);
     }
+    public function pickup()
+    {
+        return $this->hasMany(Pickup::class);
+    }
     
 }
