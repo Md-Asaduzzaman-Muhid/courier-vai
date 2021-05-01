@@ -18,6 +18,7 @@ class CreatePickupsTable extends Migration
             $table->bigInteger('merchant_id');
             $table->string('total_parcel')->nullable();
             $table->dateTime('pickup_time')->nullable();
+            $table->smallInteger('status')->nullable();
             $table->timestamps();
         });
     }

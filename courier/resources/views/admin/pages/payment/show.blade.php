@@ -27,7 +27,7 @@
                   <td>{{@$parcel->amount_to_collect - @$parcel->delivery_charge}}</td>
                   <td>{{@$parcel->payment->status}}</td>
                   <td>
-                    <form action="{{ route('admin.payment.update', $parcel->payment->id) }}" method="POST">
+                    <form action="{{ route('admin.payment.update', $parcel->payment->id ?? $parcel->id) }}" method="POST">
                       @CSRF
                       {{ method_field('PUT') }}
                       <div class="form-group">

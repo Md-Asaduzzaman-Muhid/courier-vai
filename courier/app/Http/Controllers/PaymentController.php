@@ -84,7 +84,7 @@ class PaymentController extends Controller
         $payment->status = $request['status'];
 
         $payment->save();
-        return back()->with('success', 'Successfully Created Parcel');
+        return back()->with('success', 'Successfully updated');
     }
 
     /**

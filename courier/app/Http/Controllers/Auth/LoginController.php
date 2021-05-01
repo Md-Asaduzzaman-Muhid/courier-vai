@@ -61,7 +61,7 @@ class LoginController extends Controller
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password, 'is_super' => 1], $request->get('remember'))) {
 
             return redirect()->intended('/admin');
         }

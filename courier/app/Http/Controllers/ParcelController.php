@@ -139,6 +139,14 @@ class ParcelController extends Controller
             "created_at" =>  date('Y-m-d H:i:s'),
             "updated_at" => date('Y-m-d H:i:s'),]
         );
+        if( $request['status'] == 4){
+            DB::table('payments')->insert(
+                ['parcel_id' => $parcel->id,
+                'status' => 0,
+                "created_at" =>  date('Y-m-d H:i:s'),
+                "updated_at" => date('Y-m-d H:i:s'),]
+            );
+        }
         return back()->with('success', 'Successfully Created Parcel');
     }
 }
