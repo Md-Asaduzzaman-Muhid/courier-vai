@@ -44,15 +44,17 @@
                                     <button onclick="return confirm('Are you sure?')"class="text-danger">Change Status</button>
                                 </form>
                             </td>
-                            <td>{{@$parcel->price}}</td>
-                            <td><a href="{{ route('admin.parcels.edit', $parcel->id) }}">Edit</a> 
-    
-                            <form action="{{ route('admin.parcels.destroy', $parcel->id) }}" method="POST">
-                                <input type="hidden" name="_method" value="DELETE">
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <button onclick="return confirm('Are you sure?')" class="text-danger">Delete</button>
-                            </form>
-                            <a href="#" class="text-danger">Raise Issue</a>
+                            <td>Amount To Collect: {{@$parcel->amount_to_collect}}
+                               Delivery Charge: {{@$parcel->delivery_charge}}
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.parcels.edit', $parcel->id) }}">Edit</a> 
+                                <form action="{{ route('admin.parcels.destroy', $parcel->id) }}" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <button onclick="return confirm('Are you sure?')" class="text-danger">Delete</button>
+                                </form>
+                                <a href="#" class="text-danger">Raise Issue</a>
                             </td>
                         </tr>
                         @endforeach

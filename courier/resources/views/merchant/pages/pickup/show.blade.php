@@ -39,7 +39,12 @@
                     <td>{{@$pickup->created_at}}</td>
                     <td>{{@$pickup->pickup_time}}</td>
                     <td>{{@$pickup->total_parcel}}</td>
-                    <td>{{@$pickup->status}}</td>
+                    <td>@if($pickup->status == 0 || $pickup->status == null) Submited 
+                        @elseif($pickup->status == 1) Request Accepted 
+                        @elseif($pickup->status == 2) Pickup Done 
+                        @else Unknown 
+                        @endif
+                    </td>
                 </tr>
                 @endforeach
                 </tbody>

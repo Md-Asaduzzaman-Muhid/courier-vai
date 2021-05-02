@@ -20,12 +20,29 @@
                 <tbody>
                     @foreach($parcels as $parcel)
                     <tr>
-                        <td>{{$parcel->created_at->isoFormat('Do MMM, YYYY H:mm') }}</td>
-                        <td>{{$parcel->id}}</td>
-                        <td>{{$merchant_name}}</td>
-                        <td>{{$parcel->reciever->name}}</td>
-                        <td>{{$parcel->reciever->id}}</td>
-                        <td>{{$parcel->price}}</td>
+                        <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY h:m A') }}</td>
+                        <td>{{@$parcel->tracking_id}}</td>
+                        <td>{{@$merchant_name}}</td>
+                        <td><p class="mb-0">{{@$parcel->reciever->name}}</p>
+                            <p class="mb-0">{{@$parcel->reciever->phone}}</p>
+                            <p class="mb-0">{{@$parcel->reciever->address}}</p>
+                        </td>
+                        <td>
+                            @if($parcel->status == 0 || $parcel->status == null) Parcel Created
+                            @elseif($parcel->status == 1) Recieved by parcel goal
+                            @elseif($parcel->status == 2) Send to nearest delivery point
+                            @elseif($parcel->status == 3) On the way to deliver
+                            @elseif($parcel->status == 4) Successfully delivered
+                            @elseif($parcel->status == 5) Customer didn't respond
+                            @elseif($parcel->status == 6) On the way to return
+                            @elseif($parcel->status == 7) Returned to merchant
+                            @else Unknown Status
+                            @endif
+                    
+                        </td>
+                        <td><p class="mb-0">Amount To Collect : {{@$parcel->amount_to_collect}}</p>
+                            <p class="mb-0">Delivery Charge : {{@$parcel->delivery_charge}}</p>
+                        </td>
                         <td><a href="{{ route('merchant.parcels.edit', $parcel->id) }}">Edit</a> 
 
                         <form action="{{ route('merchant.parcels.destroy', $parcel->id) }}" method="POST">

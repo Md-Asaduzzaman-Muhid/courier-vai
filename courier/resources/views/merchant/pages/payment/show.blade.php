@@ -24,7 +24,13 @@
                   <td>{{@$parcel->delivery_charge}}</td>
                   <td>0</td>
                   <td>{{@$parcel->amount_to_collect - @$parcel->delivery_charge}}</td>
-                  <td>{{@$parcel->payment->status}}</td>
+                  <td>
+                    @if(@$parcel->payment->status == 0 || @$parcel->payment->status == null) Processing
+                    @elseif(@$parcel->payment->status == 1) Paid
+                    @elseif(@$parcel->payment->status == 2) Something wrong
+                    @else Unknown
+                    @endif
+                  </td>
               </tr>
               @endforeach
             </tbody>

@@ -18,8 +18,16 @@ class PickupController extends Controller
      */
     public function index()
     {
-        $pickups = Pickup::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
-        return view('merchant.pages.pickup.show',compact(['pickups']));
+        if(Auth::guard('merchant')->check()):
+            $pickups = Pickup::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
+            return view('merchant.pages.pickup.show',compact(['pickups']));
+        elseif(Auth::guard('admin')->check()):
+            $pickups = Pickup::where('merchant_id', '=', Auth::guard('admin')->user()->id)->orderBy('created_at', 'DESC')->get();
+            return view('admin.pages.pickup.show',compact(['pickups']));
+        else:
+            return $error = "Nor Permited";
+        endif;
+        
     }
 
     /**
