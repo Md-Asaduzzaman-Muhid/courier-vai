@@ -7,8 +7,7 @@
 
         <title>Parcel Goal</title>
         <link rel="icon" href="{{ asset('img/common/favicon.png') }}" sizes="32x32" type="image/png">
-        <!-- Styles -->
-        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        
 
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="{{url('css/fontawesome/all.min.css')}}">
@@ -20,6 +19,8 @@
         <!-- Google Font: Source Sans Pro -->
         <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+        <!-- Styles -->
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
 
