@@ -1,0 +1,96 @@
+/**********************************************
+----------------- Services ---------------------
+***********************************************/
+.service{
+    padding: 20px 20px 20px 100px;
+    margin-bottom: 30px;
+    position: relative;
+    background: $primary-color;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+    .icon{
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        i{
+            font-size: 50px;
+        }
+    }
+}
+/**********************************************
+----------------- FAQ ---------------------
+***********************************************/
+#accordion {
+    [data-toggle="collapse"] i:before {  
+        content: "\f068";
+    }
+      
+    [data-toggle="collapse"].collapsed i:before {
+        content: "\f067";
+    }
+    .card-header{
+        margin-bottom: 8px;
+    }
+    .accordion-title{
+        position: relative;
+        display: block;
+        padding:8px 0 8px 50px;
+        background: $primary-color;
+        border-radius: 8px;
+        overflow: hidden;
+        text-decoration: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        width: 100%;
+        text-align: left;
+        transition: all .4s ease-in-out; 
+        i{
+            position: absolute;
+            width: 40px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            color: #fff;
+            background: radial-gradient(rgba( $primary-color, .8),  $primary-color);
+            text-align: center;
+            border-right: 1px solid transparent;
+        }
+        &:hover{
+            padding-left: 60px;
+            background:  $primary-color;
+            color: #fff;
+            
+            i {
+                border-right: 1px solid #fff;
+            }
+        }
+        
+    }
+    .accordion-body{
+        padding: 40px 55px;
+
+        
+        ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+        
+        li {
+            padding-left: 1.2rem;
+            text-indent: -1.2rem;
+
+            &:before {
+                content: "\f10a";
+                padding-right: 5px;
+                font-family: "Flaticon";
+                font-size: 16px;
+                font-style: normal;
+                color:  $primary-color;
+            }
+        }
+    }
+}

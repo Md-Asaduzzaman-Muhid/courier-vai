@@ -39,6 +39,8 @@ Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@
 
 
 Route::get('/track', 'App\Http\Controllers\ParcelController@track')->name('parcel.track');
+Route::view('/services', 'anonymous.services')->name('services');
+Route::view('/faqs', 'anonymous.faq')->name('faqs');
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');

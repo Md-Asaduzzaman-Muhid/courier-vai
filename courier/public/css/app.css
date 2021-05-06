@@ -10061,6 +10061,36 @@ a:hover {
   min-height: 300px;
 }
 
+.page-title {
+  position: relative;
+  color: #2d9688;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+.page-title:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #2d9688;
+}
+.page-title:after {
+  width: 150px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 15px;
+  left: 50%;
+  margin-left: -75px;
+  background-color: #2d9688;
+}
+
 .navbar-fixed {
   top: 0;
   z-index: 100;
@@ -10258,4 +10288,92 @@ input.invalid {
     font-size: 25px;
     padding: 5px;
   }
+}
+/**********************************************
+----------------- Services ---------------------
+***********************************************/
+.service {
+  padding: 20px 20px 20px 100px;
+  margin-bottom: 30px;
+  position: relative;
+  background: #2d9688;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08) !important;
+}
+.service .icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.service .icon i {
+  font-size: 50px;
+}
+
+/**********************************************
+----------------- FAQ ---------------------
+***********************************************/
+#accordion [data-toggle=collapse] i:before {
+  content: "";
+}
+#accordion [data-toggle=collapse].collapsed i:before {
+  content: "";
+}
+#accordion .card-header {
+  margin-bottom: 8px;
+}
+#accordion .accordion-title {
+  position: relative;
+  display: block;
+  padding: 8px 0 8px 50px;
+  background: #2d9688;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: left;
+  transition: all 0.4s ease-in-out;
+}
+#accordion .accordion-title i {
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: #fff;
+  background: radial-gradient(rgba(45, 150, 136, 0.8), #2d9688);
+  text-align: center;
+  border-right: 1px solid transparent;
+}
+#accordion .accordion-title:hover {
+  padding-left: 60px;
+  background: #2d9688;
+  color: #fff;
+}
+#accordion .accordion-title:hover i {
+  border-right: 1px solid #fff;
+}
+#accordion .accordion-body {
+  padding: 40px 55px;
+}
+#accordion .accordion-body ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+#accordion .accordion-body li {
+  padding-left: 1.2rem;
+  text-indent: -1.2rem;
+}
+#accordion .accordion-body li:before {
+  content: "";
+  padding-right: 5px;
+  font-family: "Flaticon";
+  font-size: 16px;
+  font-style: normal;
+  color: #2d9688;
 }

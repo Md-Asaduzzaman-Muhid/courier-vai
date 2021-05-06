@@ -55,6 +55,35 @@
 .min-h-300 {
   min-height: 300px;
 }
+.page-title{
+    position: relative;
+    color: $primary-color;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+  &:before{
+    width: 28px;
+    height: 5px;
+    display: block;
+    content: "";
+    position: absolute;
+    bottom: 3px;
+    left: 50%;
+    margin-left: -14px;
+    background-color: $primary-color;
+  }
+  &:after{
+    width: 150px;
+    height: 1px;
+    display: block;
+    content: "";
+    position: relative;
+    margin-top: 15px;
+    left: 50%;
+    margin-left: -75px;
+    background-color: $primary-color;
+  }
+}
   //header -------------------------------
   .navbar-fixed {
     top: 0;

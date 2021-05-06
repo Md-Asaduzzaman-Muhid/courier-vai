@@ -4,13 +4,14 @@
             <div class="row">
                     <div class="col-lg-3 col-md-6"> 
                         <div class="footer-box ">
-                            <h4 class="footer-title">Page</h4>
+                            <h4 class="footer-title">Importent Links</h4>
                             <ul class="list-unstyled footer-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Question</a></li>
-                                <li><a href="#">Admin</a></li>
+                                <li><a href="{{ route('faqs') }}">FAQ</a></li>
+                                <li><a href="#">Coverage Area</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -28,14 +29,10 @@
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-box">
-                            <h4 class="footer-title">Page</h4>
-                            <ul class="list-unstyled footer-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Question</a></li>
-                                <li><a href="#">Admin</a></li>
-                            </ul>
+                            <h4 class="footer-title">How To Contact</h4>
+                            <p>House : 56, Badda link Road, Dhaka 1212, Bangladesh</p>
+                            <a href="tel:01920020044">019200 200 44</a>
+                            <a href="mailto:parcelgoal@gmail.com">parcelgoal@gmail.com</a>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6"> 
@@ -43,7 +40,8 @@
                             <a class="navbar-brand" href="{{ route('home') }}">
                                 <img src="{{ asset('img/common/logo.png') }}" alt="logo" class="img-fluid">
                             </a>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi dolores et cumque sequi eligendi asperiores.</p>
+                            <p>Parcel Goal is one of the leargest & trusted Delivery Platform in Bangladesh.
+                            Currently we are operating in Dhaka, Soon We will announce nationwide.</p>
                         </div>
                     </div>
             </div>
@@ -53,7 +51,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-left order-md-1 order-2">Powerd by <a href="http://iosoup.com/" target="_blank">ioSoup</a></div>
-                <div class="col-md-6 text-center text-md-right order-md-2 order-1"> MCQ Hub © 2021</div>
+                <div class="col-md-6 text-center text-md-right order-md-2 order-1"> Parcel Goal</div>
             </div>
         </div>
     </div>
