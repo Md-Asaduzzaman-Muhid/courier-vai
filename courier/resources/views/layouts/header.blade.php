@@ -40,16 +40,16 @@
                         <a href="{{ route('services') }}" class="nav-link ">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Pricing</a>
+                        <a href="{{ route('pricing') }}" class="nav-link ">Pricing</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Coverage Map</a>
+                        <a href="{{ route('coverage_map') }}" class="nav-link ">Coverage Map</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Career</a>
+                        <a href="{{ route('career') }}" class="nav-link ">Career</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link ">Support</a>
+                        <a href="{{ route('support') }}" class="nav-link ">Support</a>
                     </li>
                 </ul>
             </div>

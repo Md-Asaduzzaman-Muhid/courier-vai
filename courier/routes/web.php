@@ -41,6 +41,11 @@ Route::post('/register/merchant', 'App\Http\Controllers\Auth\RegisterController@
 Route::get('/track', 'App\Http\Controllers\ParcelController@track')->name('parcel.track');
 Route::view('/services', 'anonymous.services')->name('services');
 Route::view('/faqs', 'anonymous.faq')->name('faqs');
+Route::view('/pricing', 'anonymous.pricing')->name('pricing');
+Route::view('/coverage_map', 'anonymous.coverage_map')->name('coverage_map');
+Route::view('/support', 'anonymous.support')->name('support');
+Route::view('/career', 'anonymous.career')->name('career');
+
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');

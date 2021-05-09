@@ -267,3 +267,7 @@ input.invalid {
 .logo{
   max-width: 150px;
 }
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: $primary-color;
+}

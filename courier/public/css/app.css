@@ -10274,6 +10274,11 @@ input.invalid {
   max-width: 150px;
 }
 
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #2d9688;
+}
+
 @media (max-width: 575.98px) {
   .list-inline-item:not(:last-child) {
     margin-right: 0;
@@ -10376,4 +10381,13 @@ input.invalid {
   font-size: 16px;
   font-style: normal;
   color: #2d9688;
+}
+
+/**********************************************
+----------------- PRICING ---------------------
+***********************************************/
+.pricing-single {
+  background-color: #2d9688;
+  padding: 10px;
+  color: #fff;
 }
