@@ -10042,6 +10042,17 @@ a:hover {
   color: #2d9688;
 }
 
+.btn-common-rev {
+  background-color: #fff;
+  color: #2d9688;
+  font-weight: 700;
+  border: 2px solid #fff;
+}
+.btn-common-rev:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
 .btn-solid {
   border-radius: 0;
   padding-left: 27px;
@@ -10089,6 +10100,39 @@ a:hover {
   left: 50%;
   margin-left: -75px;
   background-color: #2d9688;
+}
+
+.bg-theme {
+  background-color: #2d9688;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+.section-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 55px;
+  background-color: #2d9688;
+}
+.section-title:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  height: 1px;
+  width: 95%;
+  max-width: 255px;
+  background-color: #2d9688;
+}
+
+a {
+  color: #2d9688;
 }
 
 .navbar-fixed {
@@ -10268,6 +10312,16 @@ input.invalid {
 
 .step.finish {
   background-color: #4CAF50;
+}
+
+.box i {
+  padding: 10px 20px;
+  background: #2d9688;
+  color: #fff;
+  border-radius: 10px;
+}
+.box a {
+  color: #2d9688;
 }
 
 .logo {

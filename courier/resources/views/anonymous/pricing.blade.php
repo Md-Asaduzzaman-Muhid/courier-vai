@@ -115,7 +115,7 @@
                         <div class="body">
                             <h4>95TK</h4>
                             <p>next day</p><span>upto 1kg</span>
-                            <p>Pickup from Dhaka metro Area and delivered inside dhaka metro area</p>
+                            <p>Pickup from Dhaka metro Area and delivered Beside dhaka metro area</p>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
                         <div class="body">
                             <h4>95TK </h4>
                             <p>next day</p><span>upto 1kg</span>
-                            <p>Pickup from Dhaka metro Area and delivered inside dhaka metro area</p>
+                            <p>Pickup from Sub Dhaka Area and delivered inside dhaka metro area</p>
                         </div>
                     </div>
                 </div>
@@ -151,9 +151,9 @@
             </div>
         </div>
     </section>
-    <section class="calculate">
+    <section class="calculate pb-5">
             <div class="container">
-                <h3 class="section-title text-center">Calculate Charge</h3>
+                <h3 class="page-title text-center">Calculate Charge</h3>
                 <form>
                     <div class="row">
                         <div class="col-md-3">

@@ -4,12 +4,11 @@
             <div class="row">
                     <div class="col-lg-3 col-md-6"> 
                         <div class="footer-box ">
-                            <h4 class="footer-title">Importent Links</h4>
+                            <h4 class="section-title">Importent Links</h4>
                             <ul class="list-unstyled footer-list">
                                 <li><a href="{{ route('faqs') }}">FAQ</a></li>
-                                <li><a href="#">Coverage Area</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Our Goal</a></li>
                                 <li><a href="#">Pricing</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
@@ -17,19 +16,19 @@
                     </div>
                     <div class="col-lg-3 col-md-6"> 
                         <div class="footer-box">
-                            <h4 class="footer-title">Page</h4>
+                            <h4 class="section-title">Quick Access</h4>
                             <ul class="list-unstyled footer-list">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Question</a></li>
-                                <li><a href="#">Admin</a></li>
+                                <li><a href="#">Become Marchent</a></li>
+                                <li><a href="#">Become Rider</a></li>
+                                <li><a href="#">Coverage Area</a></li>
+                                <li><a href="#">Pricing</a></li>
+                                <li><a href="#">Services</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-box">
-                            <h4 class="footer-title">How To Contact</h4>
+                            <h4 class="section-title">How To Contact</h4>
                             <p>House : 56, Badda link Road, Dhaka 1212, Bangladesh</p>
                             <a href="tel:01920020044">019200 200 44</a>
                             <a href="mailto:parcelgoal@gmail.com">parcelgoal@gmail.com</a>
