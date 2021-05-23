@@ -10333,6 +10333,12 @@ input.invalid {
   background-color: #2d9688;
 }
 
+button {
+  border: transparent;
+  background-color: transparent;
+  padding-left: 0;
+}
+
 @media (max-width: 575.98px) {
   .list-inline-item:not(:last-child) {
     margin-right: 0;

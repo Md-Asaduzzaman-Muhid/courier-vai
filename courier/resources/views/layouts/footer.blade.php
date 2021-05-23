@@ -7,10 +7,10 @@
                             <h4 class="section-title">Importent Links</h4>
                             <ul class="list-unstyled footer-list">
                                 <li><a href="{{ route('faqs') }}">FAQ</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Our Goal</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="{{ route('about_us') }}">About Us</a></li>
+                                <li><a href="{{ route('about_us') }}">Our Goal</a></li>
+                                <li><a href="{{ route('pricing') }}">Pricing</a></li>
+                                <li><a href="{{ route('support') }}">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -18,11 +18,11 @@
                         <div class="footer-box">
                             <h4 class="section-title">Quick Access</h4>
                             <ul class="list-unstyled footer-list">
-                                <li><a href="#">Become Marchent</a></li>
-                                <li><a href="#">Become Rider</a></li>
-                                <li><a href="#">Coverage Area</a></li>
-                                <li><a href="#">Pricing</a></li>
-                                <li><a href="#">Services</a></li>
+                                <li><a href="{{ route('merchant.register') }}">Become Marchent</a></li>
+                                <li><a href="{{ route('rider.register') }}">Become Rider</a></li>
+                                <li><a href="{{ route('coverage_map') }}">Coverage Area</a></li>
+                                <li><a href="{{ route('pricing') }}">Pricing</a></li>
+                                <li><a href="{{ route('services') }}">Services</a></li>
                             </ul>
                         </div>
                     </div>

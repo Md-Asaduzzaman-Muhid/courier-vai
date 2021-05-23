@@ -1,4 +1,4 @@
-@extends('merchant.layouts.app')
+@extends('admin.layouts.app')
 @section('content')
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">

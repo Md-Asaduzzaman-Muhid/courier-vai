@@ -1,4 +1,4 @@
-@extends('merchant.layouts.app')
+@extends('admin.layouts.app')
 @section('content')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -18,18 +18,26 @@
             </thead>
             <tbody>
               @foreach($parcels as $parcel)
-              <tr>
+              <tr class="@if(@$parcel->payment->status ==2) text-success @elseif(@$parcel->payment->status == 0) text-danger @else @endif">
                   <td>{{@$parcel->tracking_id }}</td>
                   <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY')}}</td>
                   <td>{{@$parcel->amount_to_collect}}</td>
                   <td>{{@$parcel->delivery_charge}}</td>
                   <td>0</td>
                   <td>{{@$parcel->amount_to_collect - @$parcel->delivery_charge}}</td>
-                  <td>{{@$parcel->payment->status}}</td>
                   <td>
-                    <form action="{{ route('admin.payment.update', $parcel->payment->id ?? $parcel->id) }}" method="POST">
+                      @if(@$parcel->payment->status == null) Not Delivered
+                      @elseif(@$parcel->payment->status == 0) Enlisted
+                      @elseif(@$parcel->payment->status == 1) Processing
+                      @elseif(@$parcel->payment->status == 2) Paid
+                      @else Unknown Status
+                      @endif
+                  </td>
+                  <td>
+                    <form action="{{ route('admin.payment.update', $parcel->id) }}" method="POST">
                       @CSRF
                       {{ method_field('PUT') }}
+                        <input type="hidden" name="id" value={{$parcel->id}}>
                       <div class="form-group">
                         <select class="form-control" name= "status">
                           <option value= "1">Pending</option>

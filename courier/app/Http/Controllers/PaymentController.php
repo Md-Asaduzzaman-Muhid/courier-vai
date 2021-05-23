@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DB;
 use Auth;
 use App\Models\Payment;
 use App\Models\Parcel;
@@ -22,7 +23,9 @@ class PaymentController extends Controller
             $parcels = Parcel::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
             return view('merchant.pages.payment.show',compact(['parcels']));
         elseif(Auth::guard('admin')->check()):
+
             $parcels = Parcel::orderBy('created_at', 'DESC')->get();
+//        dd($parcels['0']->payment);
             return view('admin.pages.payment.show',compact(['parcels']));
         else:
             return $error = "Nor Permited";
@@ -79,11 +82,15 @@ class PaymentController extends Controller
      * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Payment $payment)
+    public function update(Request $request)
     {
-        $payment->status = $request['status'];
-
-        $payment->save();
+//        dd($request);
+//        $payment->status = $request['status'];
+//
+//        $payment->save();
+        DB::table('payments')->where(['parcel_id' => $request['id']])->
+        update(['status' => $request['status']
+            ]);
         return back()->with('success', 'Successfully updated');
     }
 

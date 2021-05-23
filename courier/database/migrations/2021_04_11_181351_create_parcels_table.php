@@ -17,6 +17,7 @@ class CreateParcelsTable extends Migration
             $table->id();
             $table->string('tracking_id', 20);
             $table->bigInteger('merchant_id');
+            $table->bigInteger('rider_id')->nullable();
             $table->string('weight')->nullable();
             $table->smallInteger('type')->nullable();
             $table->string('price')->nullable();

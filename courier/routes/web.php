@@ -45,7 +45,7 @@ Route::view('/pricing', 'anonymous.pricing')->name('pricing');
 Route::view('/coverage_map', 'anonymous.coverage_map')->name('coverage_map');
 Route::view('/support', 'anonymous.support')->name('support');
 Route::view('/career', 'anonymous.career')->name('career');
-
+Route::view('/about', 'anonymous.about')->name('about_us');
 
 Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], function(){
     Route::view('/', 'admin.pages.dashboard')->name('admin.dashboard');
@@ -57,8 +57,10 @@ Route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth:web,admin'], 
 Route::group(['prefix'=>'merchant','as'=>'merchant.','middleware'=>'auth:web,merchant'], function(){
     Route::view('/', 'merchant.pages.dashboard')->name('merchant.dashboard');
     Route::view('/rates', 'merchant.pages.rate')->name('merchant.rate');
-    Route::view('/profile/edit', 'merchant.pages.edit_profile')->name('edit.profile');
-    Route::post('/profile/edit', 'App\Http\Controllers\MerchantController@store')->name('merchant.edit');
+
+    Route::get('/update/profile', 'App\Http\Controllers\MerchantController@updateMerchantForm')->name('update.profile');
+    Route::patch('/update','App\Http\Controllers\MerchantController@updateMerchant')->name('update.profile.info');
+
     Route::resource('parcels', ParcelController::class);
     Route::resource('payment', PaymentController::class);
     Route::resource('pickup', PickupController::class);

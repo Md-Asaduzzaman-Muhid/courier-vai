@@ -132,6 +132,7 @@ class RegisterController extends Controller
         ]);
         return redirect()->intended('login/merchant');
     }
+
     protected function create(array $data)
     {
         return User::create([

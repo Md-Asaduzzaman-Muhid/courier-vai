@@ -53,7 +53,7 @@ background-size: cover;">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
                 <h3 class="mb-md-4 mb-2">Next day payment</h3>
                 <p>Once the delivery is complete you will receive payment the very next working day.</p>
-                <a class="btn-common-rev btn" href="#">Join Marchent</a>
+                <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
         <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
@@ -66,7 +66,7 @@ background-size: cover;">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
                 <h3 class="mb-md-4 mb-2">Reverse Delivery</h3>
                 <p>We provide reverse delivery, allowing customers to return products.</p>
-                <a class="btn-common-rev btn" href="#">Join Marchent</a>
+                <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
     </div>
@@ -75,7 +75,7 @@ background-size: cover;">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
                 <h3 class="mb-md-4 mb-2">Payment via bKash/Bank</h3>
                 <p>Merchants can accept payment via bank or bKash.</p>
-                <a class="btn-common-rev btn" href="#">Join Marchent</a>
+                <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
         <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
@@ -88,7 +88,7 @@ background-size: cover;">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
                 <h3 class="mb-md-4 mb-2">Live tracking</h3>
                 <p>Check the real-time location and status of your parcel from anywhere.</p>
-                <a class="btn-common-rev btn" href="#">Join Marchent</a>
+                <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
     </div>

@@ -2,32 +2,40 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use DB;
+use Auth;
+use Hash;
 use App\Models\Merchant;
-use App\Models\Company;
+use Illuminate\Http\Request;
 
 class MerchantController extends Controller
 {
-    public function update(Request $request, Merchant $merchant)
+    protected function updateMerchantForm()
     {
-        $req = Purify::clean($request->all());
-        dd($req);
-        $parcel->merchant_id = Auth::guard('merchant')->user()->id ?? $req['merchant_id'];
-        $parcel->weight = $req['weight'];
-        $parcel->type = $req['type'];
-        $parcel->price = $req['price'];
-        $parcel->amount_to_collect = $req['amount_to_collect'];
-        $parcel->save();
-        DB::table('recievers')->where('parcel_id',$parcel->id)->update(array(
-            'name' => $req['customer_name'],
-            'phone' => $req['customer_phone'],
-            'area' => $req['delivery_area'],
-            'address' => $req['customer_address'],
-            'special_instruction' => $req['special_instruction'],
-            'merchant_invoice_id' => $req['merchant_invoice_id'],
-            "updated_at" => date('Y-m-d H:i:s')
-        ));
-        
+        $merchant = Auth::guard('merchant')->user();
+//        dd($merchant->company);
+        return view('merchant.pages.update_profile',compact(['merchant']));
+    }
+
+    protected function updateMerchant(Request $request)
+    {
+//        dd($request);
+        DB::table('merchants')->where(['id' => $request['merchant_id']])->
+        update(['name' => $request['name'],
+            'email' => $request['email'],
+            'phone' => $request['phone'],
+            'nid' => $request['nid'],
+            'password' => Hash::make($request['password']),
+            'area' => $request['area']]);
+        DB::table('companies')->where(['merchant_id' => $request['merchant_id']])->
+        update(['address' => $request['address'],
+            'company_name' => $request['cName'],
+            'company_url' => $request['cUrl'],
+            'payment_type' => $request['payment'],
+            'account_holder' => $request['accountHolder'],
+            'bank_name' => $request['bankName'],
+            'account_number' => $request['accountNumber'],
+            'branch' => $request['branch']]);
         return back()->with('success', 'Successfully Created Parcel');
     }
 }

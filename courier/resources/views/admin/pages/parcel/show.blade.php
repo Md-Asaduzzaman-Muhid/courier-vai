@@ -24,7 +24,9 @@
                         <tr>
                             <td>{{@$parcel->created_at->isoFormat('Do MMM, YYYY h:m A')}}</td>
                             <td>{{@$parcel->tracking_id}}</td>
-                            <td>{{@$parcel->merchant->name}}</td>
+                            <td>{{@$parcel->merchant->name}}
+                                {{@$parcel->merchant->phoone}}
+                            </td>
                             <td>
                                 <p>{{@$parcel->reciever->name}}</p>
                                 <p>{{@$parcel->reciever->phone}}</p>
@@ -35,9 +37,13 @@
                                     <input type="hidden" name="id" value={{$parcel->id}}>
                                     <div class="form-group">
                                       <select class="form-control" name= "status">
-                                        <option value= "1">Pending</option>
-                                        <option value= "2">Paid</option>
-                                        <option value= "3">Not paid</option>
+                                          <option value= "1">Recieved by Parcel Goal</option>
+                                          <option value= "2">Send to the nearest delivery point</option>
+                                          <option value= "3">On the way to deliver</option>
+                                          <option value= "4">Successfully delivered</option>
+                                          <option value= "5">Customer couldn't respond</option>
+                                          <option value= "6">On the way to return to mercahnt</option>
+                                          <option value= "7">Successfully Returned to merchant</option>
                                       </select>
                                     </div>
 
@@ -52,9 +58,9 @@
                                 <form action="{{ route('admin.parcels.destroy', $parcel->id) }}" method="POST">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                    <button onclick="return confirm('Are you sure?')" class="text-danger">Delete</button>
+                                    <button onclick="return confirm('Are you sure?')" class="text-danger plain">Delete</button>
                                 </form>
-                                <a href="#" class="text-danger">Raise Issue</a>
+                                <a href="#" class="text-danger">Assign</a>
                             </td>
                         </tr>
                         @endforeach

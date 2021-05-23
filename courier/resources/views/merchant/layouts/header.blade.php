@@ -59,13 +59,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('merchant.edit.profile')}}" class="nav-link">
+                <a href="{{route('merchant.update.profile')}}" class="nav-link">
                   <i class="fas fa-edit nav-icon"></i>
                   <p>Edit Profile</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('merchant.edit.profile')}}" class="nav-link">
+                <a href="{{route('merchant.update.profile')}}" class="nav-link">
                   <i class="fas fa-dollar-sign nav-icon"></i>
                   <p>Payment Method</p>
                 </a>
