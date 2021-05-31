@@ -86,11 +86,17 @@
           <a href="#" class="nav-link active">
             <i class="fas fa-fast-forward nav-icon"></i>
             <p>
-              Parcel Area
+              Parcel
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ route('admin.pickup.index') }}" class="nav-link">
+                <i class="fas fa-align-justify nav-icon"></i>
+                <p>Requested Pickup</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="{{ route('admin.parcels.index') }}" class="nav-link">
                 <i class="fas fa-align-justify nav-icon"></i>

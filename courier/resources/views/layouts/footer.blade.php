@@ -29,7 +29,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-box">
                             <h4 class="section-title">How To Contact</h4>
-                            <p>House : 56, Badda link Road, Dhaka 1212, Bangladesh</p>
+                            <p>House : Sha-28, Adarsh Nagar, Badda, Dhaka 1212</p>
                             <a href="tel:01920020044">019200 200 44</a>
                             <a href="mailto:parcelgoal@gmail.com">parcelgoal@gmail.com</a>
                         </div>

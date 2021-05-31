@@ -2,7 +2,8 @@
 
 @section('content')
 <section>
-    <div class="container">
+    <div class="container py-5">
+        <h2 class="page-title text-center">Track</h2>
         <div class="row">
             <div class="col-md-2">
                 <p>Tracking ID</p>

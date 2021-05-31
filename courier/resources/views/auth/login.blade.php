@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-6">
                     <div class="login-form">
-                        <h2 class="section-title text-center">Sign In</h2>
+                        <h2 class="text-center">Sign In</h2>
                         @isset($url)
                             <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
                         @else

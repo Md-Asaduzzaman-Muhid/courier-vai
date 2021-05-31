@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use DB;
 use Auth;
 use App\Models\Parcel;
 use App\Models\Pickup;
@@ -22,7 +23,7 @@ class PickupController extends Controller
             $pickups = Pickup::where('merchant_id', '=', Auth::guard('merchant')->user()->id)->orderBy('created_at', 'DESC')->get();
             return view('merchant.pages.pickup.show',compact(['pickups']));
         elseif(Auth::guard('admin')->check()):
-            $pickups = Pickup::where('merchant_id', '=', Auth::guard('admin')->user()->id)->orderBy('created_at', 'DESC')->get();
+            $pickups = Pickup::orderBy('created_at', 'DESC')->get();
             return view('admin.pages.pickup.show',compact(['pickups']));
         else:
             return $error = "Nor Permited";
@@ -87,9 +88,14 @@ class PickupController extends Controller
      * @param  \App\Models\Pickup  $pickup
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pickup $pickup)
+    public function update(Request $request)
     {
-        //
+//        dd($request);
+        DB::table('pickups')->where('id',$request['id'])->update(array(
+            'status' => $request['status'],
+            "updated_at" => date('Y-m-d H:i:s')
+        ));
+        return back()->with('success', 'Successfully Changed status');
     }
 
     /**

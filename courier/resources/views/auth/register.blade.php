@@ -25,20 +25,6 @@
                         <form  id="regForm"  method="POST" action="{{ route('register') }}" aria-label="{{ __('Register') }}">
                         @endisset
                         @csrf
-                        <!-- <ul class="list-inline text-center" if="formStatus">
-                            <li class="list-inline-item">
-                                <i class="fab fa-gg"></i>
-                                <p>personal details</p>
-                            </li>
-                            <li class="list-inline-item">
-                            <i class="fab fa-gg"></i>
-                                <p>comapny details</p>
-                            </li>
-                            <li class="list-inline-item">
-                            <i class="fab fa-gg"></i>
-                                <p>payment details</p>
-                            </li>
-                        </ul> -->
                             <div class="tab">
                                 <h3 class="text-center mb-md-4 mb-2">personal details</h3>
                                 
@@ -53,7 +39,7 @@
                                         </div>
                                     
                                         <div class="form-group text-center mb-5">
-                                            <input id="phone" type="tel" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Enter Phone Number ...">
+                                            <input id="phone" type="tel" class="form-control @error('phone') is-invalid @enderror"maxlength="14"minlength="11" name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Enter Phone Number ...">
 
                                             @error('phone')
                                                 <span class="invalid-feedback" role="alert">

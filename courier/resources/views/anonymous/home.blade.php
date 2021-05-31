@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="banner-section" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
+<section class="banner-section" style="background-image: url({{ asset('img/user/static/banner.webp') }});background-position: center center;
 background-size: cover;">
     <div class="container">
             <div class="tracking-form-wrapper">
@@ -56,11 +56,11 @@ background-size: cover;">
                 <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
-        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/door-knock.webp') }});background-position: center center;
     background-size: cover;"></div>
     </div>
     <div class="d-flex min-h-300">
-        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study2.webp') }});background-position: center center;
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/to-home.webp') }});background-position: center center;
     background-size: cover;"></div>
         <div class="w-50 bg-theme d-flex align-items-center justify-content-center">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
@@ -78,11 +78,11 @@ background-size: cover;">
                 <a class="btn-common-rev btn" href="{{ route('merchant.register') }}">Register Now</a>
             </div>
         </div>
-        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study1.webp') }});background-position: center center;
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/cash.webp') }});background-position: center center;
                 background-size: cover;"></div>
     </div>
     <div class="d-flex min-h-300">
-        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/study2.webp') }});background-position: center center;
+        <div class="w-50 bg-dark" style="background-image: url({{ asset('img/user/static/search.webp') }});background-position: center center;
                 background-size: cover;"></div>
         <div class="w-50 bg-theme d-flex align-items-center justify-content-center">
             <div class="feature-equal-item text-center text-white px-md-5 px-2 mx-md-5 mx-0">
